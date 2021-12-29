@@ -36,7 +36,9 @@ public class AcessoFilter implements Filter {
     }
 
     private static boolean acessoLiberado(HttpSession sessao, String requestURI) {
-        return requestURI.endsWith("/login.xhtml") || sessao != null && sessao.getAttribute("usuario") != null
+        return requestURI.endsWith("/login.xhtml")
+                || requestURI.endsWith("/sobre.xhtml")
+                || sessao != null && sessao.getAttribute("usuario") != null
                 || requestURI.indexOf("/public/") >= 0 || requestURI.contains("javax.faces.resource");
     }
 }

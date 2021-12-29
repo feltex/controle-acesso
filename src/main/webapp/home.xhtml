@@ -16,24 +16,19 @@
 
                 <p:menubar>
                     <p:submenu label="Relatórios" icon="pi pi-fw pi-file">
-                        <p:submenu label="New" icon="pi pi-fw pi-plus">
-                            <p:menuitem value="Bookmark" icon="pi pi-fw pi-bookmark"/>
-                            <p:menuitem value="Video" icon="pi pi-fw pi-video"/>
-                        </p:submenu>
-                        <p:menuitem value="Delete" icon="pi pi-fw pi-trash"/>
+                        <p:menuitem value="Ativos" outcome="/relatorio/relatorios.xhtml"/>
                         <p:separator/>
-                        <p:menuitem value="Export" icon="pi pi-fw pi-external-link"/>
+                        <p:menuitem value="Inativos" outcome="/relatorio/relatorios.xhtml"/>
                     </p:submenu>
-                    <p:submenu label="Usuários" icon="pi pi-fw pi-user">
-                        <p:menuitem value="Novo" icon="pi pi-fw pi-user-plus"/>
-                        <p:menuitem value="Lista" icon="pi pi-fw pi-user-plus"/>
+                    <p:submenu label="Usuários">
+                        <p:menuitem value="Novo" outcome="/usuario/usuarios.xhtml"/>
+                        <p:menuitem value="Lista" outcome="/usuario/usuarios.xhtml"/>
                     </p:submenu>
 
-                    <p:menuitem value="Sobre"  icon="pi pi-fw pi-calendar">
+                    <p:menuitem value="Sobre" ajax="false" outcome="/info/sobre.xhtml">
                     </p:menuitem>
                     <f:facet name="options">
                         <p:commandButton action="#{loginBean.logout}" ajax="false" value="Logout"
-                                         icon="pi pi-fw pi-sign-out"
                                          styleClass="ui-button-info"/>
                     </f:facet>
                 </p:menubar>
